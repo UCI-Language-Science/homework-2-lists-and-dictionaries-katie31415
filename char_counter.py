@@ -27,22 +27,13 @@
 def char_counter():
     print ("Please enter a word or phrase:")
     word_or_phrase = input ('')
-    characters = []
-    count = []
-    for i in range(len(word_or_phrase)):
-        if word_or_phrase[i] not in characters:
-            characters = characters + [word_or_phrase[i]]
     word_or_phrase = list(word_or_phrase)
-    for i in range(len(characters)):
-        word_or_phrase.remove(characters[i])
-        variable = 1
-        while characters[i] in word_or_phrase:
-            word_or_phrase.remove(characters[i])
-            variable = variable + 1
-        count = count + [variable]
-    for i in range(len(characters)):
-        print ("'" + characters[i] + "' : " + str(count[i]) + '  ')
-    
-
+    character_dict = {}
+    for char in word_or_phrase:
+        character_dict[char] = character_dict.get(char, 0) + 1
+    for key, val in character_dict.items():
+        print("'" + str(key) + "' : " + str(val) + '    ')
+               
+               
 if __name__ == "__main__":
     char_counter()
