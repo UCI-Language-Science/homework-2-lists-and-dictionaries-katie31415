@@ -27,8 +27,8 @@
 def char_counter():
     print ("Please enter a word or phrase:")
     word_or_phrase = input ('')
-    characters = []
-    count = []
+    characters = ['']
+    count = ['']
     for i in range(len(word_or_phrase)):
         if word_or_phrase[i] not in characters:
             characters = characters + [word_or_phrase[i]]
