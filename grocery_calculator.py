@@ -32,7 +32,7 @@ def grocery_calculator():
     cost_of_items = [3, 6, 4, 2, 0]
     total_cost = 0
     print ('Input grocery item: ')
-    name = input()
+    name = input('')
     if name not in grocery_items:
         print ("The store doesn't have that")
     total_cost = total_cost + cost_of_items [grocery_items.index(name)]
@@ -40,7 +40,7 @@ def grocery_calculator():
         if name == '':
             break
         print ('Input next grocery item: ')
-        name = input()
+        name = input('')
         if name not in grocery_items:
             print ("The store doesn't have that")
         elif name == '':
