@@ -26,7 +26,7 @@
 
 def char_counter():
     print ("Please enter a word or phrase:")
-    word_or_phrase = input ()
+    word_or_phrase = input ('')
     characters = []
     count = []
     for i in range(len(word_or_phrase)):
