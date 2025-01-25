@@ -25,14 +25,14 @@
 # code should work for arbitrary strings, including the empty string.
 
 def char_counter():
+    import pprint
     print ("Please enter a word or phrase:")
     word_or_phrase = input ('')
     word_or_phrase = list(word_or_phrase)
     character_dict = {}
     for char in word_or_phrase:
         character_dict[char] = character_dict.get(char, 0) + 1
-    for key, val in character_dict.items():
-        print("'" + str(key) + "' : " + str(val) + '    ')
+    print(character_dict)
                
                
 if __name__ == "__main__":
