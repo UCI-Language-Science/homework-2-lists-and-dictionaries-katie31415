@@ -25,9 +25,15 @@
 # code should work for arbitrary strings, including the empty string.
 
 def char_counter():
-    # YOUR CODE GOES HERE
-    # You can delete the line below when you start adding code
-    pass
-
+    import pprint
+    print ("Please enter a word or phrase:")
+    word_or_phrase = input ('')
+    word_or_phrase = list(word_or_phrase)
+    character_dict = {}
+    for char in word_or_phrase:
+        character_dict[char] = character_dict.get(char, 0) + 1
+    print(character_dict)
+               
+               
 if __name__ == "__main__":
     char_counter()
